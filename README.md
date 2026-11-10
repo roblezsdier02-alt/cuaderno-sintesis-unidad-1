@@ -1,137 +1,126 @@
-# Cuaderno digital de síntesis — Unidad 1
+<a id="inicio"></a>
+<div align="center"><img src="assets/institucional/logo-unl.png" alt="Escudo y logotipo de la Universidad Nacional de Loja" width="390">CUADERNO DIGITAL DE SÍNTESIS
+Unidad 1 · Análisis de lógica combinacional con diseño clásico
+Universidad Nacional de Loja
+Facultad de la Energía, las Industrias y los Recursos Naturales no Renovables
+Carrera de Computación · Segundo ciclo, paralelo A
+Información académica	Detalle
+Estudiante	Sdier Emanuel Roblez Roblez
+Asignatura	Diseño de Circuitos
+Docente	Ing. Luis Darío Sinche Cueva, Mg.
+Periodo académico	Septiembre 2026 – marzo 2027
+Unidad	Unidad 1
 
-**Asignatura:** Diseño de Circuitos  
-**Unidad:** Análisis de lógica combinacional con diseño clásico  
-**Universidad:** Universidad Nacional de Loja  
-**Docente:** Ing. Luis Darío Sinche Cueva, Mg.  
-**Periodo de la portada de clase:** Septiembre 2026 – marzo 2027
 
-Proyecto educativo estático, elaborado a partir de **nueve PDF originales** aportados para las semanas 1–4. La **semana 5 está pendiente**: no incluye ejercicios, fórmulas ni temas supuestos.
+ABRIR EL CUADERNO DIGITAL INTERACTIVO
 
-## 1. Estructura exacta del proyecto
+IR AL ÍNDICE GENERAL
+</div><a id="presentacion"></a>
+Presentación
+Este cuaderno organiza los conocimientos desarrollados durante la Unidad 1 de Diseño de Circuitos. Los contenidos se presentan en el orden de las clases e integran explicaciones, fórmulas, tablas de verdad, ejemplos resueltos, diagramas de circuitos y actividades práctico-experimentales.
 
-```text
-cuaderno-sintesis-unidad-1/
-├── index.html
-├── README.md
-├── .nojekyll
-├── css/
-│   └── estilos.css
-├── js/
-│   ├── contenido.js
-│   └── app.js
-└── assets/
-    ├── diapositivas/
-    │   ├── semana-01.pdf
-    │   ├── semana-02.pdf
-    │   ├── semana-03.pdf
-    │   ├── semana-03-sesion-02.pdf
-    │   └── semana-04.pdf
-    ├── practicas/
-    │   ├── ape-01.pdf
-    │   ├── ape-02.pdf
-    │   ├── ape-03.pdf
-    │   └── ape-04.pdf
-    └── circuitos/
-        ├── 01-and.svg, 01-or.svg, 01-not.svg, ...
-        ├── 02-alarma-canonica.svg, ...
-        ├── 03-kmap-4-variables-sop.svg, ...
-        └── 04-sumador-restador-4-bits.svg, ...
-```
+Su finalidad es facilitar el repaso de los procedimientos de diseño de lógica combinacional y relacionar el análisis teórico con los circuitos implementados en Logisim Evolution.
 
-**32 SVG completos** están incluidos en `assets/circuitos/`. Todos pueden ampliarse desde las secciones académicas o desde el catálogo «Técnicas y circuitos resueltos».
+Objetivo general: sintetizar los temas de la unidad y disponer de un recurso de consulta que permita revisar tanto los fundamentos como los procedimientos de resolución de ejercicios.
 
-El archivo `CODIGO_COMPLETO.md` también está disponible con el código íntegro del HTML, CSS, JS y todos los SVG, identificado por ruta. Los PDF son archivos binarios originales, no código fuente.
+El material incorporado corresponde a las semanas 1 a 4. La semana 5 permanece pendiente hasta contar con las diapositivas respectivas.
 
-## 2. Cómo abrirlo localmente
+↑ Volver al índice
+<a id="indice-general"></a>
+Índice general
+Selecciona el tema que deseas consultar. Cada enlace abre directamente ese apartado en el cuaderno digital.
+Inicio
+- 00 · Portada
+- 01 · Índice general
+- 02 · Introducción
+Semana 1
+- 1.1 · Sistemas binarios y niveles lógicos
+- 1.2 · Conversiones y suma binaria
+- 1.3 · Complemento a dos y códigos
+- 1.4 · Las siete compuertas lógicas
+- 1.5 · Práctica 001 · Logisim Evolution
+Semana 2
+- 2.1 · Álgebra de Boole y sus leyes
+- 2.2 · Minitérminos, maxitérminos y SOP/POS
+- 2.3 · Alarma: circuito simplificado
+- 2.4 · Práctica 002 · Comparación AB > C
+Semana 3
+- 3.1 · Mapas de Karnaugh: reglas
+- 3.2 · Karnaugh de 4 variables: SOP y POS
+- 3.3 · Condiciones indiferentes (X)
+- 3.4 · Implementaciones solo NAND y solo NOR
+- 3.5 · Práctica 003 · Detector de primos BCD
+Semana 4
+- 4.1 · Aritmética binaria y acarreo
+- 4.2 · Semisumador (HA)
+- 4.3 · Sumador completo (FA)
+- 4.4 · Sumador de cuatro bits y retardo ripple
+- 4.5 · Sumador/restador y overflow
+- 4.6 · Comparadores de igualdad y magnitud
+- 4.7 · Práctica 004 · Sumadores en Logisim
+Semana 5
+- 5.0 · Semana 5 · Pendiente de material
+Recursos y cierre
+- T · Técnicas y circuitos resueltos
+- PDF · Diapositivas y prácticas originales
+- D · Registro de dudas pendientes
+- C · Conclusiones de la Unidad 1
+- B · Bibliografía y fuentes utilizadas
+<a id="contenido-semanas"></a>
+Síntesis de los temas estudiados
+Semana 1 · Sistemas numéricos, códigos y compuertas
+Representación binaria y niveles lógicos; sistemas decimal, binario, octal y hexadecimal; complemento a dos; códigos BCD, Gray y ASCII; compuertas AND, OR, NOT, NAND, NOR, XOR y XNOR; reconocimiento de Logisim Evolution.
 
-1. Descomprime el ZIP y conserva toda la estructura de carpetas.
-2. Abre `index.html` con Chrome, Edge o Firefox.
-3. Comprueba la portada, el índice y los apartados.
-4. Los PDF incluidos pueden abrirse con «Abrir» o «Descargar». Algunos navegadores restringen la previsualización integrada de los PDF cuando el protocolo es `file://`; eso **no significa** que el PDF no exista.
-5. Para verificar la publicación completa, utiliza GitHub Pages por HTTPS. No hace falta Node.js, npm, React, base de datos ni dependencias.
+Consultar la semana 1 · ↑ Volver al índice
+Semana 2 · Álgebra de Boole y formas canónicas
+Leyes y teoremas del álgebra de Boole; minitérminos y maxitérminos; formas canónicas SOP y POS; simplificación algebraica; interpretación de funciones mediante circuitos.
 
-## 3. Cómo publicarlo en GitHub Pages
+Consultar la semana 2 · ↑ Volver al índice
+Semana 3 · Mapas de Karnaugh y compuertas universales
+Mapas de Karnaugh de tres y cuatro variables, código Gray, agrupaciones, expresiones mínimas SOP/POS, condiciones indiferentes e implementación mediante NAND y NOR.
 
-1. En GitHub crea un repositorio nuevo, por ejemplo `cuaderno-sintesis-unidad-1`.
-2. Sube **el contenido de la carpeta** del proyecto a la raíz del repositorio: `index.html`, `css/`, `js/`, `assets/`, `README.md` y `.nojekyll`. No subas solamente el ZIP.
-3. Abre **Settings → Pages**.
-4. En **Build and deployment**, elige **Deploy from a branch**.
-5. Selecciona `main` y **/(root)**. Guarda.
-6. Cuando termine el despliegue, abre **Visit site**. Su URL será aproximadamente `https://TU-USUARIO.github.io/cuaderno-sintesis-unidad-1/`, según el nombre real de tu repositorio.
-7. Las rutas del sitio son relativas (`./assets/...`), por lo que funcionan debajo del nombre del repositorio.
+Consultar la semana 3 · ↑ Volver al índice
+Semana 4 · Circuitos aritméticos
+Suma binaria, semisumador, sumador completo, sumador de cuatro bits, suma y resta en complemento a dos, acarreo, desbordamiento y comparadores.
 
-Documentación oficial: <https://docs.github.com/es/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site>
+Consultar la semana 4 · ↑ Volver al índice
+Semana 5 · Pendiente
+Este espacio se completará cuando estén disponibles los materiales correspondientes.
 
-### Precaución antes de publicar
+Ver la sección pendiente · ↑ Volver al índice
+<a id="material-original"></a>
+Diapositivas y prácticas originales
+Los siguientes archivos forman parte del material académico de consulta.
+Semana	Diapositivas	Práctica
+1	[Clase de la semana 1](assets/diapositivas/semana-01.pdf)	[Práctica 001](assets/practicas/ape-01.pdf)
+2	[Clase de la semana 2](assets/diapositivas/semana-02.pdf)	[Práctica 002](assets/practicas/ape-02.pdf)
+3	[Sesión 1](assets/diapositivas/semana-03.pdf) · [Sesión 2](assets/diapositivas/semana-03-sesion-02.pdf)	[Práctica 003](assets/practicas/ape-03.pdf)
+4	[Clase de la semana 4](assets/diapositivas/semana-04.pdf)	[Práctica 004](assets/practicas/ape-04.pdf)
+5	Pendiente	Pendiente
 
-Algunas prácticas originales incluyen nombres de estudiantes y otros datos en sus portadas. **GitHub Pages es públicamente accesible.** Revisa si dispones de autorización para publicar esos PDF. Si no, prepara versiones anonimizadas para un repositorio público antes de subirlos. No incluyas documentos con datos personales privados sin permiso.
 
-## 4. Cómo añadir o reemplazar diapositivas
+Abrir biblioteca de documentos · ↑ Volver al índice
+<a id="circuitos"></a>
+Técnicas y circuitos digitales
+El cuaderno presenta 32 diagramas vectoriales SVG de compuertas, redes lógicas y circuitos combinacionales asociados con los ejemplos y las prácticas. Pueden consultarse en el catálogo del sitio.
 
-- Semana 1: `assets/diapositivas/semana-01.pdf`
-- Semana 2: `assets/diapositivas/semana-02.pdf`
-- Semana 3, sesión 1: `assets/diapositivas/semana-03.pdf`
-- Semana 3, sesión 2: `assets/diapositivas/semana-03-sesion-02.pdf`
-- Semana 4: `assets/diapositivas/semana-04.pdf`
-- Las prácticas están en `assets/practicas/ape-01.pdf` hasta `ape-04.pdf`.
+Explorar los circuitos resueltos · ↑ Volver al índice
+<a id="dudas-academicas"></a>
+Registro de dudas y seguimiento
+El cuaderno dispone de un apartado para registrar temas por reforzar, escribir preguntas y marcar las dudas como resueltas. Las anotaciones se guardan localmente en el navegador; no se publican en GitHub.
 
-Si reemplazas uno de esos archivos y mantienes su nombre y ruta, los enlaces actuales se conservarán. Si agregas otro PDF, inserta un objeto en el arreglo `pdfs` de `js/contenido.js`, indicando `id`, `semana`, `nombre`, `ruta`, `paginas` y `clase`.
+Abrir el registro de dudas · ↑ Volver al índice
+<a id="bibliografia-readme"></a>
+Fuentes y alcance
+Este trabajo se elaboró con las cinco presentaciones y cuatro informes de prácticas incluidos en el repositorio, correspondientes a las semanas 1 a 4 de la asignatura. Para consultar los documentos y los datos de cada fuente, visita la bibliografía del cuaderno.
 
-**Semana 5:** coloca el futuro PDF original en `assets/diapositivas/semana-05.pdf` y, solo cuando hayas revisado sus páginas, agrega su registro al manifiesto y sustituye el texto pendiente en el apartado `s5-pendiente` de `js/contenido.js`. No enlaces a un PDF inexistente.
+Los diagramas SVG son representaciones de apoyo a la explicación y no sustituyen archivos editables .circ de Logisim Evolution.
 
-En la biblioteca, la aplicación usa peticiones HTTP `HEAD` para verificar las rutas disponibles en GitHub Pages. Si falta un archivo, muestra un aviso y deshabilita el botón del PDF. No crea nombres inventados ni enlaces simulados.
+Nota institucional: el logotipo reproducido en este repositorio procede del encabezado de un documento académico de la Universidad Nacional de Loja facilitado para este trabajo. Su presencia identifica el contexto universitario del cuaderno; no implica que el repositorio sea un canal oficial de la institución.
 
-## 5. Cómo añadir, corregir o quitar diagramas
+↑ Volver al índice
+<div align="center">Sdier Emanuel Roblez Roblez
+Universidad Nacional de Loja · Carrera de Computación
 
-Todos los SVG están guardados en `assets/circuitos/` con nombres descriptivos. Se diseñaron con fondo cuadriculado y símbolos de compuertas o bloques de subcircuito. Algunos diagramas usan rótulos para identificar señales repetidas y compuertas NOT donde hacen falta inversiones.
-
-Para cambiar un circuito, reemplaza el SVG correspondiente sin alterar su nombre. Para agregar otro, crea el SVG y registra su descripción en el arreglo `circuitos` de `js/contenido.js`. Después agrega su explicación en el apartado semanal. **Verifica la tabla de verdad antes de publicar.**
-
-Los SVG **no** son archivos `.circ` de Logisim Evolution. En esta entrega no se incluyen archivos `.circ`, ya que no se ha validado su compatibilidad mediante una instalación y una simulación del programa. Las capturas y resultados de los reportes de prácticas son fuentes, no pruebas de ejecución de estos SVG.
-
-## 6. Qué hace cada archivo de código
-
-| Archivo | Responsabilidad |
-|---|---|
-| `index.html` | Estructura semántica, menús, botones, búsqueda y contenedores accesibles. |
-| `css/estilos.css` | Interfaz académica, responsive y estilos de impresión A4. |
-| `js/contenido.js` | Temario, contenido académico, diagramas, tabla y manifiestos PDF. |
-| `js/app.js` | Navegación, progreso, buscador, comprobación PDF, formulario de dudas, simulador de compuertas y almacenamiento local. |
-| `assets/circuitos/*.svg` | Diagramas independientes de lógica digital. |
-
-Para adaptar el texto modifica únicamente `js/contenido.js`. Las secciones se muestran de forma automática en el índice y en la navegación lateral. No es necesario editar HTML para introducir un nuevo tema.
-
-## 7. Comprobación de funcionamiento
-
-- [ ] La portada se muestra y el campo de estudiante permite escribir y conservar el valor.
-- [ ] El índice enlaza directamente con cada tema y el menú lateral permite saltar libremente.
-- [ ] «Inicio», «Anterior», «Siguiente» y «Volver al índice» funcionan; «Anterior» se desactiva en portada y «Siguiente» al final.
-- [ ] El indicador de sección actual y el progreso se actualizan al desplazarse.
-- [ ] Ctrl + K abre el buscador y permite saltar a un tema.
-- [ ] La tabla de compuertas de dos entradas coincide con la demostración interactiva.
-- [ ] Los 32 SVG están visibles y se amplían sin pixelación.
-- [ ] Los nueve PDF muestran «Archivo disponible» en Pages, se pueden abrir y descargar.
-- [ ] El visor integrado abre y cierra sin dejar botones inactivos.
-- [ ] La semana 5 muestra «Pendiente» y no ofrece un archivo inexistente.
-- [ ] Se pueden agregar, editar, resolver, volver a marcar pendientes y eliminar dudas.
-- [ ] Las dudas pueden exportarse e importarse mediante JSON.
-- [ ] En móvil el menú se abre y cierra; no existe desplazamiento horizontal.
-- [ ] Al imprimir se ocultan menús, botones y visores, manteniendo el texto y los diagramas.
-
-**Guardado de dudas:** se utiliza `localStorage` del navegador, no un servidor. Si limpias los datos del navegador o abres el sitio en otro dispositivo, las notas no aparecen automáticamente allí. Exporta un JSON para hacer una copia de seguridad. Tampoco se mezclan las dudas con el código fuente público.
-
-## 8. Notas de exactitud académica
-
-Los ejemplos proceden de las diapositivas y prácticas adjuntas, con referencias de documento y página incluidas en cada apartado. Las expresiones se verificaron con tablas de verdad enumeradas, incluidos:
-
-- Alarma de tres sensores: `F=AB+AC+BC`, activa en 3,5,6,7.
-- Comparación práctica 002: `F=A+BC'` para AB (dos bits) mayor que C (un bit).
-- Karnaugh de cuatro variables: equivalencia SOP/POS de `Σm(0,1,2,5,8,9,10)`.
-- BCD primo: `F=B'C+BD` para los diez dígitos BCD válidos; 10–15 son indiferentes.
-- Sumador completo: `S=A⊕B⊕Cin` y `Cout=AB+A·Cin+B·Cin`.
-- Sumador/restador: `Bᵢ⊕M`, `Cin₀=M`, `V=C3⊕C4`.
-
-Hay diagramas que muestran un subcircuito HA o FA como un bloque; su lógica interna está representada en otro SVG. En el comparador de magnitud de dos bits, la expresión algebraica es una derivación explícita de la regla verbal enseñada en la diapositiva, no una fórmula que se atribuya textualmente a ella.
-
-**No se añaden referencias bibliográficas ajenas a los nueve PDF recibidos.**
+Abrir cuaderno digital · Volver al inicio del README · Índice general
+</div>
